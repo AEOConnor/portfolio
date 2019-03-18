@@ -1,4 +1,93 @@
 header {
-  background: pink;
-  height: 100vh;
+  background: linear-gradient(to right, $primaryColour 50%, darken($primaryColour, 2%) 50%);
+  height: 95vh;
+  position: relative;
+  color: $tertiaryColour;
 }
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0; 
+  left: 50%; 
+  width: 0; 
+  height: 0; 
+  border: 20px solid transparent; 
+  border-top-color: darken($primaryColour, 2%); 
+  border-bottom: 0; 
+  border-left: 0; 
+  margin-right: -10px; 
+  margin-bottom: -20px;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  bottom: 0; 
+  right: 50%; 
+  width: 0; 
+  height: 0; 
+  border: 20px solid transparent; 
+  border-top-color: $primaryColour; 
+  border-bottom: 0; 
+  border-right: 0; 
+  margin-left: -10px; 
+  margin-bottom: -20px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin: 20px 0;
+  justify-content: center;
+  text-align: center;
+  line-height: 0.8;
+}
+
+.intro {
+  display: block;
+  text-emphasis: left;
+}
+
+
+.headerContent {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30vh;
+}
+
+.headerSocialLinks {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+    li a {
+      padding: 1px 20px;
+      @include transition;  
+    }
+    li a:hover,
+    li a:focus {
+      color: $accentColour;
+    }     
+}
+
+.fab {
+  font-size: 1.5rem;
+}
+
+
+.flower {
+  fill: $accentColour;
+  opacity: 0;
+}
+
+// @keyframes grow {
+//   from {
+//    opacity: 0;
+//    transform: rotate(45);
+//   }
+
+//   to {
+//     opacity: 100%
+//   }
+// }

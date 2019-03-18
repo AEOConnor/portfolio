@@ -1,0 +1,82 @@
+.portfolio {
+  padding: 100px 0;
+  background: linear-gradient(to right, #fff 50%, darken(#fff, 2%) 50%);
+}
+
+.portfolioImage,
+.portfolioCopy {
+  width: calc(50% - 10px);
+  margin: 0 10px;
+  position: relative;
+}
+
+.portfolioItemContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 100px 0;
+}
+
+.portfolioItemContainer .portfolioImage {
+  margin-left: 0;
+  margin-right: 20px;
+  background: linear-gradient(to left, $tertiaryColour 50%, darken($tertiaryColour, 5%) 50%);
+  padding: 1em;
+}
+
+.portfolioItemContainer:nth-of-type(2n){
+  flex-direction: row-reverse;
+}
+
+.portfolioItemContainer:nth-of-type(2n) .portfolioImage {
+  margin-right: 0;
+  margin-left: 20px;
+  background: linear-gradient(to right, $tertiaryColour 50%, darken($tertiaryColour, 5%) 50%);
+}
+
+.portfolioItemContainer .portfolioImage::after {
+  content: "";
+  position: absolute;
+  bottom: -15px; 
+  left: 50%; 
+  width: 0; 
+  height: 0; 
+  border: 20px solid transparent; 
+  border-bottom-color: $tertiaryColour; 
+  border-top: 0; 
+  border-left: 0; 
+  margin-right: 0; 
+  margin-top: -20px;
+}
+
+
+.portfolioItemContainer .portfolioImage::before {
+  content: "";
+  position: absolute;
+  bottom: -15px; 
+  right: 50%; 
+  width: 0; 
+  height: 0; 
+  border: 20px solid transparent; 
+  border-bottom-color: darken($tertiaryColour, 5%); 
+  border-top: 0; 
+  border-right: 0; 
+  margin-left:0 ; 
+  margin-top: -20px;
+}
+
+
+.portfolioItemContainer:nth-of-type(2n) .portfolioImage::after{
+
+  border-bottom-color:darken($tertiaryColour, 5%);  
+
+}
+
+.portfolioItemContainer:nth-of-type(2n) .portfolioImage::before{
+
+  border-bottom-color: $tertiaryColour; 
+}
+
+.portfolioItemSkills {
+  display: flex;
+  justify-content: space-between;
+}

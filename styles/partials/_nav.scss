@@ -1,0 +1,59 @@
+.topHeaderBar {
+  width: 100%;
+  background: $accentColour;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    li {
+      margin: 0 5px;
+    }
+    li a {
+      padding: 1px 20px;
+      @include transition;
+      position: relative;
+    }
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+label > svg {
+  fill: #fff;
+  height: 50px;
+  width: 50px;
+  display: none;
+  position: fixed;
+  top: -5px;
+  right: 20px;
+  background: transparentize($color: $tertiaryColour, $amount: .5);
+}
+
+svg g {
+  transition: all .5s ease;
+}
+
+nav li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .25s linear;
+}
+
+nav li > a:hover:before,
+nav li> a:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+

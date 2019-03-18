@@ -5,7 +5,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 html {
-  font-size: 125%
+  font-size: 125%;
+  line-height: 1.6;
 }
 
 h1,
@@ -31,15 +32,62 @@ section {
   left: 0;
 }
 
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 //font variables
 $headingFont: 'Raleway', Helvetica, Arial, sans-serif;
 $bodyFont: 'Open Sans', Helvetica, Arial, sans-serif;
+$h1Font: 'Quicksand', Helvetica, Arial, sans-serif;
+
+body {
+  font-family: $bodyFont;
+}
+
+h1 {
+  font-family: $h1Font;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: $headingFont;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
 
 //colour variables
 $primaryColour: #FFB4AC;
 $secondaryColour: #679186;
 $tertiaryColour: #264E70;
 $accentColour: #FFEBD3;
+$fontColour: #010101;
+
+.navTop {
+  position: fixed;
+  right: 20px;
+  top: 40vh;
+  font-size: 1.5rem;
+  color: $tertiaryColour;
+}
 
 //mixins 
 
+@mixin transition {
+  transition: all .3s ease-in-out;
+} 

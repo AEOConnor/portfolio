@@ -1,0 +1,40 @@
+.contact {
+  background: linear-gradient(to left,$primaryColour 50%, darken($primaryColour, 2%) 50%) ;
+  padding: 50px 0;
+    .contactLeft {
+      width: calc(50% - 20px);
+      margin: 0 20px 0 0;
+    }
+    .contactRight {
+      width: calc(50% - 20px);
+      margin: 0 0 0 20px;
+    }
+}
+
+fieldset {
+  border: none;
+  display: flex;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 5px 20px;
+  background: $accentColour;
+  border: 1px solid transparent;
+}
+
+input:hover,
+textarea:hover,
+button:hover,
+input:focus,
+textarea:focus,
+button:focus {
+  border: 1px solid $secondaryColour;
+}
+
+textarea {
+  resize: none;
+  margin-bottom: 10px;
+}
