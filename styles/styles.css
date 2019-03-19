@@ -159,8 +159,22 @@ fieldset {
 .skipLink:focus {
   left: 0; }
 
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
 .wrapper {
   max-width: 1280px;
+  width: 90%;
   margin: 0 auto; }
 
 body {
@@ -188,7 +202,7 @@ img {
 
 .navTop {
   position: fixed;
-  right: 20px;
+  right: 10px;
   bottom: 20px;
   font-size: 1.5rem;
   color: #264E70;
@@ -401,10 +415,10 @@ h1 {
 
 .portfolio {
   padding: 100px 0;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(50%, #fafafa));
-  background: -webkit-linear-gradient(left, #fff 50%, #fafafa 50%);
-  background: -o-linear-gradient(left, #fff 50%, #fafafa 50%);
-  background: linear-gradient(to right, #fff 50%, #fafafa 50%); }
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(50%, #f7f7f7));
+  background: -webkit-linear-gradient(left, #fff 50%, #f7f7f7 50%);
+  background: -o-linear-gradient(left, #fff 50%, #f7f7f7 50%);
+  background: linear-gradient(to right, #fff 50%, #f7f7f7 50%); }
 
 .portfolioImage,
 .portfolioCopy {
@@ -537,7 +551,8 @@ h1 {
 
 .skills {
   background: #679186;
-  padding: 50px 0; }
+  padding: 50px 0;
+  color: #264E70; }
   .skills ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -573,19 +588,26 @@ svg {
   background: -webkit-linear-gradient(right, #FFB4AC 50%, #ffaba2 50%);
   background: -o-linear-gradient(right, #FFB4AC 50%, #ffaba2 50%);
   background: linear-gradient(to left, #FFB4AC 50%, #ffaba2 50%);
-  padding: 50px 0; }
-  .contact .contactLeft {
-    width: calc(50% - 20px);
-    margin: 0 20px 0 0; }
-  .contact .contactRight {
-    width: calc(50% - 20px);
-    margin: 0 0 0 20px; }
+  padding: 50px 0;
+  color: #264E70; }
 
 fieldset {
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.contactLeft {
+  width: calc(50% - 20px);
+  margin-right: 20px; }
+
+.contactRight {
+  width: calc(50% - 20px);
+  margin-left: 20px; }
 
 input,
 textarea,
@@ -593,7 +615,12 @@ button {
   width: 100%;
   padding: 5px 20px;
   background: #FFEBD3;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  color: #264E70;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+
+fieldset input:last-of-type {
+  margin: 10px 0; }
 
 input:hover,
 textarea:hover,
@@ -630,9 +657,17 @@ footer {
   .contact .contactLeft,
   .contact .contactRight {
     width: 100%;
-    margin: 0; } }
-
-@media (max-width: 750px) {
+    margin: 0; }
+  .aboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+  .aboutPicContainer,
+  .leftAbout,
+  .rightAbout {
+    width: 100%;
+    margin: 0; }
   .portfolioItemContainer,
   .portfolioItemContainer:nth-of-type(2n) {
     -webkit-box-orient: vertical;
@@ -648,16 +683,6 @@ footer {
     margin: 30px 0; } }
 
 @media (max-width: 650px) {
-  .aboutContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse; }
-  .aboutPicContainer,
-  .leftAbout,
-  .rightAbout {
-    width: 100%;
-    margin: 0; }
   .topHeaderBar {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -666,7 +691,8 @@ footer {
   .topHeaderBar label {
     z-index: 1000; }
   label svg {
-    display: block; }
+    display: block;
+    right: 31px; }
   .topHeaderBar nav ul {
     display: none; }
   #responsiveNav:checked ~ nav ul {
@@ -676,14 +702,14 @@ footer {
     -ms-flex-direction: column;
     flex-direction: column;
     background: rgba(255, 235, 211, 0.6);
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0px;
+    left: -40px;
+    right: -40px;
     bottom: 0;
     position: absolute;
     z-index: 30;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 10vh;
     position: fixed; }
     #responsiveNav:checked ~ nav ul a {
       font-size: 1.2rem; }

@@ -16,9 +16,18 @@
     width: 100%;
     margin: 0;
   }
-}
 
-@media (max-width: 750px) {
+  .aboutContainer {
+    flex-direction: column-reverse;
+  }
+
+  .aboutPicContainer,
+  .leftAbout,
+  .rightAbout {
+    width: 100%;
+    margin: 0;
+  }
+
   .portfolioItemContainer,
   .portfolioItemContainer:nth-of-type(2n) {
     flex-direction: column;
@@ -36,18 +45,9 @@
   }
 }
 
+
 @media (max-width: 650px) {
-  .aboutContainer {
-    flex-direction: column-reverse;
-  }
-
-  .aboutPicContainer,
-  .leftAbout,
-  .rightAbout {
-    width: 100%;
-    margin: 0;
-  }
-
+  
   .topHeaderBar {
     flex-direction: row-reverse;
   }
@@ -58,6 +58,7 @@
 
   label svg  {
     display: block;
+    right: 31px;
   }
   
   .topHeaderBar nav ul{
@@ -69,14 +70,14 @@
     display: block;
     flex-direction: column;
     background: transparentize($color: $accentColour, $amount: .4);
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0px;
+    left: -40px;
+    right: -40px;
     bottom: 0;
     position: absolute;
     z-index: 30;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 10vh;
     position: fixed;
       a {
         font-size: 1.2rem;

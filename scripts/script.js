@@ -3,6 +3,8 @@ $(function () {
 
   ScrollReveal().reveal('.portfolioItemContainer', {delay: 200})
 
+  ScrollReveal().reveal('.section', { delay: 200 })
+
   $('.aboutLink').on('click', function() {
     console.log("hi")
     $.smoothScroll({

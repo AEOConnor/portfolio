@@ -2,6 +2,24 @@
 <html lang="en">
 
 <head>
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="assets/android-chrome-192x192.png" sizes="192x192">
+  <meta name="msapplication-square70x70logo" content="assets/smalltile.png" />
+  <meta name="msapplication-square150x150logo" content="assets/mediumtile.png" />
+  <meta name="msapplication-wide310x150logo" content="assets/widetile.png" />
+  <meta name="msapplication-square310x310logo" content="assets/largetile.png" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -37,7 +55,6 @@
       </label>
       <nav>
         <ul class="wrapper">
-
           <li><a href="#about" class="aboutLink">About</a></li>
           <li><a href="#portfolio" class="porfolioLink">Portfolio</a></li>
           <li><a href="#skills" class="skillsLink">Skills</a></li>
@@ -49,7 +66,7 @@
       <h1>Alanna O'Connor</h1>
       <h2>Web Developer | Toronto, ON</h2>
       <ul class="headerSocialLinks">
-        <li><a href=""><i class="fab fa-github" target="_blank"></i><span class="sr-only">Visit Alanna's Github
+        <li><a href="https://github.com/AEOConnor" target="_blank"><i class="fab fa-github" target="_blank"></i><span class="sr-only">Visit Alanna's Github
               account.</span></a></li>
 
         <li><a href="https://www.linkedin.com/in/alanna-o-connor/" target="_blank"><i class="fab fa-linkedin-in"></i><span
@@ -64,9 +81,10 @@
   <main id="mainContent">
     <section id="about" class="about">
       <div class="wrapper aboutContainer">
-        
+
         <div class="leftAbout">
-          <p>Hi, I'm Alanna! I'm a graduate of HackerYou's web development bootcamp. Web development has redefined my
+          <p>Hi, I'm Alanna! I'm a Toronto-based web developer and graduate of HackerYou. Web development has redefined
+            my
             passion for communications and strategic content creation. Through HTML, CSS, and JavaScript, I've learned
             the power of web inclusivity and I'm eager to work with tech teams that are bringing people together, on
             and offline.</p>
@@ -79,18 +97,19 @@
         </div>
         <div class="rightAbout">
           <div class="aboutPicContainer">
-            <img src="assets/AlannaOConnor.jpg" alt="Alanna O'Connor">
+            <img src="assets/alannaoconnorfavicon.png" alt="Alanna O'Connor">
           </div>
 
         </div>
       </div>
 
     </section>
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio section">
       <div class="wrapper">
         <div class="portfolioContainer">
           <h2 class="sectionHeading">Portfolio</h2>
           <div class="portfolioItemContainer">
+
             <div class="portfolioImage">
               <img src="assets/knowYourReps.png" alt="Homepage of Know Your Reps web application, featuring a visual design of Parliament Hill in Ottawa, Ontario.">
             </div>
@@ -116,8 +135,10 @@
               </ul>
             </div>
 
+
           </div>
           <div class="portfolioItemContainer">
+
             <div class="portfolioImage">
               <img src="assets/lightBright.png" alt="Homepage of Light Bright 2.0 web application, featuring a floral light design.">
             </div>
@@ -142,6 +163,7 @@
                 </li>
               </ul>
             </div>
+
           </div>
           <div class="portfolioItemContainer">
             <div class="portfolioImage">
@@ -184,7 +206,7 @@
                 application that provides album recommendations based on artists you already like. Let RecordIt become
                 your "try something new thing" today.</p>
               <ul class="codeLink">
-                <li><a href="https://github.com/alannaoconnorlukemackenzie/projectFour" target="_blank">View code</a> </li>
+                <li><a href="https://github.com/alannaoconnorlukemackenzie/recordit" target="_blank">View code</a> </li>
                 <li> <a href="https://alannaoconnor.com/recordit/" target="_blank">View live</a></li>
               </ul>
             </div>
@@ -192,7 +214,7 @@
         </div>
       </div>
     </section>
-    <section id="skills" class="skills">
+    <section id="skills" class="skills section">
       <div class="wrapper">
         <h2 class="sectionHeading">Skills</h2>
         <ul>
@@ -232,21 +254,21 @@
         </ul>
       </div>
     </section>
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section">
       <div class="wrapper">
         <h2 class="sectionHeading">Contact</h2>
         <form method="POST" action="https://formspree.io/hello@alannaoconnor.com">
           <fieldset>
             <div class="contactLeft">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
+              <label for="name" class="visuallyHidden">Name</label>
+              <input type="text" id="name" name="name" placeholder="name"required>
 
-              <label for="email">Email</label>
-              <input type="text" id="email" name="email" required>
+              <label for="email" class="visuallyHidden">Email</label>
+              <input type="text" id="email" name="email" placeholder="email"required>
             </div>
 
             <div class="contactRight">
-              <label for="message">Your Message</label>
+              <label for="message" class="visuallyHidden">Your Message</label>
               <textarea name="message" id="message" cols="10" rows="10" placeholder="Hi, Alanna!" required></textarea>
 
               <button type="submit">Submit</button>

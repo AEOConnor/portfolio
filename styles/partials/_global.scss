@@ -35,8 +35,22 @@ fieldset {
   left: 0;
 }
 
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1280px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -84,7 +98,7 @@ img {
 
 .navTop {
   position: fixed;
-  right: 20px;
+  right: 10px;
   bottom: 20px;
   font-size: 1.5rem;
   color: $tertiaryColour;
