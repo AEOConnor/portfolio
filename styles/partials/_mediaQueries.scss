@@ -1,4 +1,53 @@
+
+@media (max-width: 1000px) {
+  .aboutPicContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 820px) {
+  fieldset {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact .contactLeft,
+  .contact .contactRight {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .portfolioItemContainer,
+  .portfolioItemContainer:nth-of-type(2n) {
+    flex-direction: column;
+  }
+
+  .portfolioItemContainer:nth-of-type(2n) .portfolioImage,
+  .portfolioItemContainer .portfolioImage {
+    margin: 0;
+  }
+
+  .portfolioImage,
+  .portfolioCopy {
+    width: 100%;
+    margin: 30px 0;
+  }
+}
+
 @media (max-width: 650px) {
+  .aboutContainer {
+    flex-direction: column-reverse;
+  }
+
+  .aboutPicContainer,
+  .leftAbout,
+  .rightAbout {
+    width: 100%;
+    margin: 0;
+  }
+
   .topHeaderBar {
     flex-direction: row-reverse;
   }
@@ -11,7 +60,7 @@
     display: block;
   }
   
-  .topHeaderBar nav ul {
+  .topHeaderBar nav ul{
     display: none;
   }
 
@@ -19,7 +68,7 @@
   #responsiveNav:checked ~ nav ul {
     display: block;
     flex-direction: column;
-    background: transparentize($color: $tertiaryColour, $amount: .4);
+    background: transparentize($color: $accentColour, $amount: .4);
     top: 0;
     left: 0;
     right: 0;
@@ -48,6 +97,33 @@
 
   #responsiveNav:checked ~ label > svg g:nth-of-type(3) {
     transform: rotate(-45deg) translate(-280px, 10px);
+  }
+
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .headerContent h2 {
+   font-size: 1.2rem; 
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .headerContent h2 {
+   font-size: 1rem; 
   }
 
 }

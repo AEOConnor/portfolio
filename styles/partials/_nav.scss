@@ -1,6 +1,8 @@
 .topHeaderBar {
   width: 100%;
   background: $accentColour;
+  display: flex;
+  justify-content: center;
     ul {
       display: flex;
       flex-direction: row;
