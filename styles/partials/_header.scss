@@ -41,7 +41,7 @@ h1 {
   margin: 20px 0;
   justify-content: center;
   text-align: center;
-  line-height: 0.8;
+  line-height: 1;
 }
 
 .intro {
@@ -49,12 +49,11 @@ h1 {
   text-emphasis: left;
 }
 
-
 .headerContent {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 30vh;
+  padding-top: 30vh;
 }
 
 .headerSocialLinks {
@@ -66,7 +65,8 @@ h1 {
       @include transition;  
     }
     li a:hover,
-    li a:focus {
+    li a:focus,
+    li a:active {
       color: $accentColour;
     }     
 }
@@ -74,20 +74,3 @@ h1 {
 .fab {
   font-size: 1.5rem;
 }
-
-
-.flower {
-  fill: $accentColour;
-  opacity: 0;
-}
-
-// @keyframes grow {
-//   from {
-//    opacity: 0;
-//    transform: rotate(45);
-//   }
-
-//   to {
-//     opacity: 100%
-//   }
-// }

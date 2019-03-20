@@ -24,8 +24,14 @@
     }
 }
 
+
+.leftAbout p:first-of-type {
+  margin-top: 0;
+}
+
 .rightAbout {
   margin-left: 20px;
+  padding-top: 120px;
 }
 
 .aboutPicContainer {

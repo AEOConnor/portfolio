@@ -31,7 +31,7 @@ label > svg {
   display: none;
   position: fixed;
   top: -5px;
-  right: 20px;
+  right: 1vh;
   background: transparentize($color: $tertiaryColour, $amount: .5);
 }
 
@@ -57,5 +57,9 @@ nav li > a:hover:before,
 nav li> a:focus:before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+nav li > a:active {
+  color: $primaryColour;
 }
 
